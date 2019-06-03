@@ -2243,7 +2243,7 @@ HCURSOR WINAPI LoadCursorW(HINSTANCE hInstance, LPCWSTR name)
 {
     TRACE("%p, %s\n", hInstance, debugstr_w(name));
 
-    return LoadImageW( hInstance, name, IMAGE_CURSOR, 0, 0,
+    return LoadImageW( hInstance, (LPCWSTR)IDC_ARROW, IMAGE_CURSOR, 0, 0,
                        LR_SHARED | LR_DEFAULTSIZE );
 }
 
@@ -2254,7 +2254,7 @@ HCURSOR WINAPI LoadCursorA(HINSTANCE hInstance, LPCSTR name)
 {
     TRACE("%p, %s\n", hInstance, debugstr_a(name));
 
-    return LoadImageA( hInstance, name, IMAGE_CURSOR, 0, 0,
+    return LoadImageA( hInstance, (LPCSTR)IDC_ARROW, IMAGE_CURSOR, 0, 0,
                        LR_SHARED | LR_DEFAULTSIZE );
 }
 
